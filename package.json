@@ -1,0 +1,27 @@
+{
+  "name": "assets",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qdinhbui2/video-hack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qdinhbui2/video-hack/issues"
+  },
+  "homepage": "https://github.com/qdinhbui2/video-hack"
+}

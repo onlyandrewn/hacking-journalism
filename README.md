@@ -1,2 +1,1 @@
-# cn-hackathon
-Hackathon
+# hackathon
