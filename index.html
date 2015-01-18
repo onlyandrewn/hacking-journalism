@@ -35,27 +35,30 @@
         <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. <span class="highlight"><img src="assets/img/icons/video-alt.png" alt="" class="iconSmall">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</span> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
 
         <summary>Caption goes here</summary>
-        <img src="http://placehold.it/975x500" alt="" class="featured">
+        <img src="http://placehold.it/875x500" alt="" class="featured">
+
+        <!-- This section is hidden until a user clicks the link -->
+        <section class="hidden">
+            <p class="prompt">Move your cursor to the corners to exit.</p>
+            <div class="cross">
+                <!-- SVG will go here -->
+            </div><!-- /.cross -->
+
+            <p class="videoTitle">Title of Video</p>
+            <p class="videoByline">Author</p>
+
+            <video height="180" width="300" id="ourvideo" controls>
+                <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.mp4">
+                </video>
+            </section><!-- /.hidden -->
+
     </section>
 
     <footer>
         <p class="comments">Comments (12)</p>
     </footer>
 
-    <!-- This section is when the user interacts with the video -->
-    <section class="hidden">
-        <p class="prompt">Move your cursor to the corners to exit.</p>
-        <div class="cross">
-            <!-- SVG will go here -->
-        </div><!-- /.cross -->
 
-        <p class="videoTitle">Title of Video</p>
-        <p class="videoByline">Author</p>
-
-        <video height="180" width="300" id="ourvideo" controls>
-            <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.mp4">
-            </video>
-        </section><!-- /.hidden -->
 
         <!-- This is where the magic happens -->
         <script src="//use.typekit.net/nig8pij.js"></script>

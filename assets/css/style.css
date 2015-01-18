@@ -380,12 +380,11 @@ summary {
   float: right;
   position: relative;
   top: 40px;
-  right: -140px;
+  right: -100px;
 }
 
 footer {
   background: #000;
-  position: fixed;
   width: 100%;
   bottom: 0;
 }
@@ -412,13 +411,40 @@ VIDEO VIEW
 }
 
 .prompt {
+  font-family: "futura-pt", sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
+  text-align: center;
 }
 
 .videoTitle,
 .videoByline {
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
   font-size: 24px;
-  line-height: 34px;
+  padding: 2px;
+}
+
+#ourvideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 0;
+  z-index: -100;
+  /*background: url(polina.jpg) no-repeat;*/
+  /*background-size: cover;*/
+  opacity: .001;
+  transition: opacity 1.8s ease-in-out;
+  -moz-transition: opacity 1.8s ease-in-out;
+  -webkit-transition: opacity 1.8s ease-in-out;
+}
+
+#ourvideo.selected {
+  opacity: .4;
 }
 
 /*----------------------------------
