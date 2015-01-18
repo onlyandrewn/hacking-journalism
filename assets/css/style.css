@@ -248,6 +248,13 @@ a:hover, a:active {
   opacity: 0.7;
 }
 
+p {
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  margin: 0px;
+  padding-top: 40px;
+}
+
 /*----------------------------------
 ARTICLE VIEW
 ----------------------------------*/
@@ -259,7 +266,7 @@ nav {
 .corner {
   float: right;
   position: fixed;
-  top: 20px;
+  top: 15px;
   right: 20px;
 }
 
@@ -285,6 +292,8 @@ nav {
   width: 75px;
   height: 75px;
   border: 1px solid red;
+  position: relative;
+  right: -80px;
 }
 
 button {
@@ -297,13 +306,20 @@ button {
   font-weight: 400;
   font-style: italic;
   font-size: 24px;
-  margin-top: 10px;
+  margin-top: 0px;
+  padding-top: 5px;
+}
+
+.opening {
+  margin: 0px;
+  padding-top: 30px;
 }
 
 aside {
   width: 10%;
   display: inline-block;
-  padding-right: 5px;
+  overflow: hidden;
+  padding-right: 20px;
 }
 aside p {
   font-family: "futura-pt",sans-serif;
@@ -327,6 +343,10 @@ aside p {
 .highlight:hover {
   background: #24b699;
   transition: 0.3s;
+}
+
+.featured {
+  padding-top: 35px;
 }
 
 .sidebar p {
