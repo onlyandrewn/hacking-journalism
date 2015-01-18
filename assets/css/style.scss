@@ -197,18 +197,25 @@ aside {
   float: left;
   overflow: hidden;
   padding-right: 20px;
+  position: relative;
+  top: 140px;
+  left: 24px;
+
   .accent {
     color: $teal;
-    font-family: 'Karla', sans-serif;
+    @include sans;
+    // font-family: 'Karla', sans-serif;
     font-weight: 700;
     padding-right: 5px;
   }
 
   p {
-    // @include sans;
-    font-family: 'Karla', sans-serif;
+    @include sans;
+    // font-family: 'Karla', sans-serif;
     font-size: 16px;
+    position: relative;
     padding-top: 0px;
+    line-height: 30px;
   }
 }
 
@@ -217,7 +224,7 @@ aside {
   font-size: 24px;
   line-height: 34px;
   margin: 0px;
-  width: 75%;
+  width: 70%;
   display: inline-block;
 }
 
@@ -252,16 +259,26 @@ summary {
 
 footer {
   background: #000;
-  color: $white;
-  padding-top: 25px;
-  padding-bottom: 50px;
-  // position: fixed;
-  p {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  .comments {
     color: #fff;
-    padding-top: 0px;
     position: relative;
+    padding-top: 0px;
   }
 }
+
+  // background: #000;
+  // color: $white;
+  // // padding-top: 25px;
+  // // padding-bottom: 50px;
+  // position: fixed;
+  // bottom: 0;
+  // p {
+  //   color: #fff;
+  //   padding-top: 0px;
+  //   // position: relative;
 
 /*----------------------------------
 VIDEO VIEW
