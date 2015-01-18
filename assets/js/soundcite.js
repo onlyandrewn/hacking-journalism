@@ -76,6 +76,7 @@
             });                
         });
     });
+    
      
 })(window, document, "1.3", function($, $Popcorn, $SoundCloud) {    
     $(document).ready(function () {
