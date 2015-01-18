@@ -30,15 +30,15 @@ $(function(){
 	var videoPlaying = false;
 
 	$('button').click(function(){
-		console.log('Is this working?')
-	})
+		console.log('Is this working?');
+		if (videoPlaying === false) {
+			console.log('How about now?');
+			// fadeIn();
+		} else {
+			console.log('Nowwwww?');
+			// fadeOut();
+		}
+	});
 });
 
-// 		if (videoPlaying == false) {
-// 			console.log('How about now?')
-// 			// fadeIn();
-// 		} else {
-// 			console.log('Nowwwww?')
-// 			// fadeOut();
-// 		}
-// });
+
