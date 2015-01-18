@@ -1,32 +1,51 @@
-// On page load nav bar drops down to reveal itself
+$(document).ready(function(){
 
-$().click(function(){
-	$().slideDown("slow", function(){
-	 // Animation complete
-	});
+// On page load nav bar drops down to reveal itself
+   $("nav").slideDown("slow", function(){
+   	 // Animation complete
+   	});
 });
 
+// When the switch is clicked, active
+$("").click(function(){
+	$(this).removeClass("").addClass("active")
+});
 
-// If the user clicks the switch, and toggles it on then add a class of "autoplay"
+// When the user clicks on a piece of text, a video using Popcorn will fadeIn
 
-// When the user clicks on a piece of text, a video using Popcorn will fadeIn, just behind
-// the text. It might need to alter the z-index of elements
-
-
-$(function(){
+$("").click(function(){
 	var videoPlaying = false;
 
-	$('button').click(function(){
-		console.log('Is this working?');
-		if (videoPlaying === false) {
-			console.log('How about now?');
-			// fadeIn();
-		} else {
-			console.log('Nowwwww?');
-			// fadeOut();
-		}
-	});
+	if (videoPlaying == false) {
+		console.log("Is this working?");
+		fadeIn();
+
+// Otherwise the video will fadeOut
+	} else {
+		console.log("How about now?");
+		fadeOut();
+	}
 });
+
+
+document.addEventListener( "DOMContentLoaded", function() {
+	var pop = Popcorn( "video" );
+
+	var targetText = $(document);
+
+
+	function fadeIn() {
+		pop.play();
+	// video.loop = true;
+	pop.fadeTo(5,.5);
+}
+
+	function fadeOut() {
+	pop.fadeTo(5,0);
+	pop.pause();
+}
+}, false);
+
 
 // These are the options for the user
 
@@ -61,32 +80,3 @@ var crossIcon = document.getElementById("crossIcon");
 document.addEventListener('DOMContentLoaded', function(){
 	crossIcon.innerHTML = 'SVG Code Goes Here';
 });
-
-
-
-// document.addEventListener( "DOMContentLoaded", function() {
-// 	var pop = Popcorn( "video" );
-
-	// var targetText = $(document);
-
-// 	targetText.click(function() {
-// 		console.log('Hey, is this working?')
-// 		if (videoPlaying == false) {
-// 			console.log('test2')
-// 			fadeIn();
-// 		} else {
-// 			fadeOut();
-// 		}
-// 	});
-
-// 	function fadeIn() {
-// 		pop.play();
-// 	// video.loop = true;
-// 	pop.fadeTo(5,.5);
-// }
-
-// 	function fadeOut() {
-// 	pop.fadeTo(5,0);
-// 	pop.pause();
-// }
-// }, false);
