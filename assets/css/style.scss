@@ -35,14 +35,29 @@ CLEARFIX
 SASS TOOLKIT
 ----------------------------------*/
 
-$white: #e9e9e9;
-$teal: #2ecc71;
+// $white: #e9e9e9;
+$white: #000000;
+$teal: #36D7B7;
 $navyBlue: #2c3e50;
 
 @mixin serif {
   font-family: 'PT Serif', serif;
   font-weight: 400;
 }
+
+@mixin italic {
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin transition {
+  transition: all 0.3s ease-in 0s;
+  -moz-transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+}
+
 
 // @mixin sans {
 //   font-style:;
@@ -111,26 +126,41 @@ a:hover, a:active {
   opacity: 0.7;
 }
 
-p {
-  margin: 0px;
-}
-
 /*----------------------------------
 ARTICLE VIEW
 ----------------------------------*/
 
 nav {
-
-}
-
-.logo {
-  width: 110px;
-  height: 110px;
-  border: 1px solid red;
+  padding-bottom: 40px;
+  position: relative;
 }
 
 .corner {
   float: right;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.autoplay {
+  display: inline-block;
+  font-size: 18px;
+}
+
+#videoIcon {
+  width: 100px;
+  height: 100px;
+}
+
+#videoIcon {
+  width: 100px;
+  height: 100px;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+  border: 1px solid red;
 }
 
 button {
@@ -139,21 +169,36 @@ button {
 }
 
 .byline {
+  @include italic;
   font-size: 24px;
+  margin-top: 10px;
 }
 
 aside {
-  float: left;
+  width: 10%;
+  display: inline-block;
+  padding-right: 5px;
+  // float: left;
+  p {
+    font-size: 16px;
+  }
 }
 
-article {
+.article {
   font-size: 24px;
   line-height: 34px;
+  margin: 0px;
+  width: 75%;
+  display: inline-block;
+  // float: left;
 }
 
-span {
+.highlight {
   background: $teal;
-  padding: 5px;
+  padding: 2.5px;
+  &:hover {
+    background: darken($teal, 10%)
+  }
 }
 
 .sidebar p{
@@ -161,8 +206,18 @@ span {
   line-height: 34px;
 }
 
+summary {
+  @include italic;
+  font-size: 16px;
+}
+
 footer {
-  color: $navyBlue;
+  background: #000;
+  color: $white;
+  padding: 25px 5px;
+  p {
+    color: #fff;
+  }
 }
 
 
@@ -184,5 +239,80 @@ VIDEO VIEW
   font-size: 24px;
   line-height: 34px;
 }
+
+/*----------------------------------
+ON/OFF BUTTON
+----------------------------------*/
+
+.onoffswitch {
+    position: relative;
+    width: 90px;
+    display: inline-block;
+    top: 12px;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    @include transition;
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: white;
+
+    // Why does box sizing above not work?
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "";
+    padding-left: 10px;
+    background-color: $teal;
+    color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "";
+    padding-right: 10px;
+    background-color: #EEEEEE;
+    color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block;
+    width: 29px;
+    margin: 0.5px;
+    background: #FFFFFF;
+    border: 1px solid #999999;
+    position: absolute;
+    top: -3px;
+    bottom: -3px;
+    @include transition;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
 
 
